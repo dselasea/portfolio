@@ -97,8 +97,8 @@ a {
   align-items: center;
 }
 
-.hero__social li a {
-  padding: 0 .5rem;
+.hero__social-links {
+  padding: 0 0.5rem;
 }
 
 .hero_arrow-down {
