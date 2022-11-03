@@ -4,18 +4,21 @@
   "description": "![](https://img.shields.io/badge/Microverse-blueviolet)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+
+  }
+  ,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dselasea/portfolio.git"
-  },
+  }
+  ,
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dselasea/portfolio/issues"
-  },
+
+  }
+  ,
   "homepage": "https://github.com/dselasea/portfolio#readme",
   "devDependencies": {
     "hint": "^7.1.3",
