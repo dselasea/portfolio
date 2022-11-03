@@ -135,11 +135,13 @@ a {
 .work__heading {
   text-align: center;
   margin-bottom: 2rem;
+  padding-bottom: 3rem;
 }
 
 .work__heading-recent,
 .work__heading-work {
   display: block;
+  font-size: 2rem;
 }
 
 .work__heading-work {
@@ -149,11 +151,13 @@ a {
 .work__heading-work::before {
   content: "";
   position: absolute;
-  left: 0;
-  right: 0;
+  bottom: -25px;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
   height: 3px;
-  width: 80%;
-  background-color: var(--text-green);
+  width: 15%;
+  background: var(--text-green);
 }
 
 .projects {
