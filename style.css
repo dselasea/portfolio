@@ -2,6 +2,7 @@
 
 :root {
   --background: #fff;
+  --dark: #42526e;
   --text-dark: #172b4d;
   --text-green: #36b37f;
   --gray: #ebf0ee;
@@ -162,6 +163,7 @@ a {
 
 .projects {
   text-align: center;
+  display: grid;
 }
 
 .card {
@@ -194,12 +196,6 @@ a {
   flex-wrap: wrap;
   padding: 1.5rem 0;
   list-style: none;
-}
-
-.card__tags-bg {
-  background-color: var(--gray);
-  border-radius: 5px;
-  padding: 0.5rem 0;
 }
 
 .card__tags-links {
@@ -266,4 +262,9 @@ a {
   padding-top: 1rem;
   padding-bottom: 10rem;
   text-align: center;
+}
+
+.footer__email {
+  text-decoration: none;
+  color: var(--dark);
 }
