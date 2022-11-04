@@ -176,9 +176,11 @@ a {
 
 .card__tags {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  padding: 1.55rem 0.5rem;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+  padding: 1.5rem 0;
 }
 
 .card__tags-links {
@@ -204,4 +206,9 @@ a {
 
 .about__text {
   margin: 1rem 0;
+}
+
+/* Skills */
+.skills {
+  text-align: center;
 }
