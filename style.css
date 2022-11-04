@@ -129,9 +129,6 @@ a {
 }
 
 /* Recent work styles */
-.work {
-  padding: 2rem 0;
-}
 .work__heading {
   text-align: center;
   margin-bottom: 2rem;
@@ -165,17 +162,23 @@ a {
 }
 
 .card {
-  border: 1px solid var(--gray);
-  padding: 0 .5rem;
+  border: 2px solid var(--gray);
   margin-bottom: 1rem;
   border-radius: 5px;
+}
+
+.card__img {
+  height: 250px;
+  width: 100%;
+  background-color: var(--gray);
+  margin-bottom: 0.5rem;
 }
 
 .card__tags {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 1.55rem 0;
+  padding: 1.55rem 0.5rem;
 }
 
 .card__tags-links {
@@ -186,4 +189,19 @@ a {
   border-radius: 5px;
   color: var(--text-dark);
   font-weight: bold;
+}
+
+/* About */
+.about {
+  text-align: center;
+  background: url(./images/mobile-illustration-1.svg) 100% 0 no-repeat,
+  url(./images/mobile-illustration-2.svg) 0 100% no-repeat;
+}
+
+.about__heading {
+  font-size: 2rem;
+}
+
+.about__text {
+  margin: 1rem 0;
 }
