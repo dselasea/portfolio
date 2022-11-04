@@ -184,6 +184,7 @@ a {
   gap: 0.3rem;
   flex-wrap: wrap;
   padding: 1.5rem 0;
+  list-style: none;
 }
 
 .card__tags-links {
