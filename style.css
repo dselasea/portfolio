@@ -177,6 +177,15 @@ a {
   margin-bottom: 0.5rem;
 }
 
+.card__tags-works {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  align-items: center;
+  list-style: none;
+  padding: 1rem;
+}
+
 .card__tags {
   display: flex;
   justify-content: center;
@@ -185,6 +194,12 @@ a {
   flex-wrap: wrap;
   padding: 1.5rem 0;
   list-style: none;
+}
+
+.card__tags-bg {
+  background-color: var(--gray);
+  border-radius: 5px;
+  padding: 0.5rem 0;
 }
 
 .card__tags-links {
