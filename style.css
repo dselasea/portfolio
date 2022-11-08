@@ -189,23 +189,18 @@ a {
 }
 
 .card__tags {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.3rem;
-  flex-wrap: wrap;
-  padding: 1.5rem 0;
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card__tags-links {
-  display: inline-block;
-  font-size: 0.75rem;
-  padding: 0.5rem 0.8rem;
   background-color: var(--gray);
-  border-radius: 5px;
   color: var(--text-dark);
-  font-weight: bold;
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin: 10px 5px;
 }
 
 /* About */
@@ -239,6 +234,18 @@ a {
 
 .contact__form form {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn__submit {
+  background-color: var(--active-state);
+  align-self: center;
+}
+
+.btn__submit:hover {
+  background-color: var(--hover-state);
+  transition: 0.3s ease;
 }
 
 .contact__text {
