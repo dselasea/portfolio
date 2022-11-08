@@ -234,6 +234,18 @@ a {
 
 .contact__form form {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn__submit {
+  background-color: var(--active-state);
+  align-self: center;
+}
+
+.btn__submit:hover {
+  background-color: var(--hover-state);
+  transition: 0.3s ease;
 }
 
 .contact__text {
@@ -250,11 +262,6 @@ a {
 
 .form-control input {
   padding: 0.8rem;
-}
-
-.btn__submit:hover {
-  background-color: var(--hover-state);
-  transition: 0.3s ease;
 }
 
 /* Footer */
