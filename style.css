@@ -2,6 +2,7 @@
 
 :root {
   --background: #fff;
+  --light-gray: #e0e1e6;
   --dark: #42526e;
   --text-dark: #172b4d;
   --text-green: #36b37f;
@@ -35,6 +36,7 @@ a {
   background-color: var(--text-green);
   border-radius: 5px;
   border: 0;
+  margin-top: 1rem;
   margin-bottom: 1.5rem;
 }
 
@@ -62,11 +64,6 @@ a {
 .nav__logo a {
   font-size: 1.3rem;
   font-weight: bold;
-  color: var(--text-dark);
-}
-
-.nav__logo a:active,
-.nav__logo a:focus {
   color: var(--text-dark);
 }
 
@@ -124,8 +121,14 @@ a {
   align-items: center;
 }
 
-.hero__social-links {
+.hero__social-links,
+.nav__links-items a {
   padding: 0 0.5rem;
+}
+
+.nav__logo a:active,
+.nav__logo a:focus {
+  color: var(--text-dark);
 }
 
 .hero_arrow-down {
@@ -173,7 +176,7 @@ a {
 }
 
 .card__img {
-  height: 250px;
+  height: 300px;
   width: 100%;
   background-color: var(--gray);
   margin-bottom: 0.5rem;
@@ -220,6 +223,7 @@ a {
 
 .skills .card {
   background-color: var(--gray);
+  padding: 2rem 0;
 }
 
 .skills .card__tags .card__tags-links {
@@ -238,6 +242,10 @@ a {
   flex-direction: column;
 }
 
+.contact__form-desktop {
+  display: none;
+}
+
 .btn__submit {
   background-color: var(--active-state);
   align-self: center;
@@ -253,15 +261,16 @@ a {
   margin-bottom: 3rem;
 }
 
+textarea,
+.form-control input {
+  padding: 0.8rem;
+}
+
 .form-control input,
 .form-control textarea {
   width: 100%;
   margin-bottom: 1rem;
   border: 2px solid var(--gray);
-}
-
-.form-control input {
-  padding: 0.8rem;
 }
 
 /* Footer */
@@ -274,4 +283,142 @@ a {
 .footer__email {
   text-decoration: none;
   color: var(--dark);
+}
+
+/* Desktop Styles min width 720px */
+@media screen and (min-width: 768px) {
+  .nav__logo,
+  .nav__hamburger {
+    display: none;
+  }
+
+  .nav__links {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav__links-items {
+    list-style: none;
+    display: flex;
+  }
+
+  .nav__links-items a {
+    color: var(--dark);
+    font-weight: bold;
+  }
+
+  header {
+    background-image: url(./images/header-illustration-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+  }
+
+  .hero {
+    background-image: none;
+  }
+
+  .hero .container {
+    display: flex;
+    padding: 8rem 0 12rem 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero__title,
+  .hero__content {
+    width: 60%;
+  }
+
+  .work__heading {
+    padding-top: 4rem;
+  }
+
+  .work__heading-recent,
+  .work__heading-work {
+    display: inline-block;
+  }
+
+  .work__heading-work::before {
+    display: none;
+  }
+}
+
+/* Desktop styles */
+@media screen and (min-width: 840px) {
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .about {
+    background: url(./images/illustration-about-me-2.svg) 0 50% no-repeat, url(./images/illustration-about-me.svg) 100% 50% no-repeat;
+    padding: 3rem 0;
+  }
+
+  .about .about__content {
+    max-width: 60%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 920px) {
+  .header {
+    padding-bottom: 14.5rem;
+  }
+
+  .hero_arrow-down {
+    padding-top: 6rem;
+  }
+
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .skills__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .contact {
+    background: url(./images/illustration-desktop-1.svg) 0 100% no-repeat, url(./images/illustration-desktop-2.svg) 25% 80% no-repeat, url(./images/illustration-desktop-3.svg) 100% 50% no-repeat;
+    padding: 6rem 0;
+    border-bottom: 2px solid var(--light-gray);
+  }
+
+  .contact__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .contact__text {
+    padding-top: 3rem;
+    text-align: left;
+  }
+
+  .contact__form {
+    display: none;
+  }
+
+  .contact__form-desktop {
+    display: block;
+  }
+
+  .contact__name {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .footer {
+    padding-bottom: 1rem;
+  }
+
+  .footer__email {
+    display: none;
+  }
 }
