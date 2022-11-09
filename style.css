@@ -2,6 +2,7 @@
 
 :root {
   --background: #fff;
+  --light-gray: #e0e1e6;
   --dark: #42526e;
   --text-dark: #172b4d;
   --text-green: #36b37f;
@@ -35,6 +36,7 @@ a {
   background-color: var(--text-green);
   border-radius: 5px;
   border: 0;
+  margin-top: 1rem;
   margin-bottom: 1.5rem;
 }
 
@@ -221,6 +223,7 @@ a {
 
 .skills .card {
   background-color: var(--gray);
+  padding: 2rem 0;
 }
 
 .skills .card__tags .card__tags-links {
@@ -237,6 +240,10 @@ a {
   text-align: center;
   display: flex;
   flex-direction: column;
+}
+
+.contact__form-desktop {
+  display: none;
 }
 
 .btn__submit {
@@ -297,7 +304,8 @@ a {
   }
 
   .nav__links-items a {
-    color: var(--text-dark);
+    color: var(--dark);
+    font-weight: bold;
   }
 
   header {
@@ -334,6 +342,75 @@ a {
   }
 
   .work__heading-work::before {
+    display: none;
+  }
+}
+
+/* Desktop styles */
+@media screen and (min-width: 840px){
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .about {
+    background: url(./images/illustration-about-me-2.svg) 0 50% no-repeat, url(./images/illustration-about-me.svg) 100% 50% no-repeat;
+    padding: 3rem 0;
+  }
+
+  .about .about__content {
+    max-width: 60%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 920px){
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .skills__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .contact {
+    background: url(./images/illustration-desktop-1.svg) 0 100% no-repeat, url(./images/illustration-desktop-2.svg) 25% 80% no-repeat, url(./images/illustration-desktop-3.svg) 100% 50% no-repeat;
+    padding: 6rem 0;
+    border-bottom: 2px solid var(--light-gray);
+  }
+
+  .contact__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .contact__text {
+    padding-top: 3rem;
+    text-align: left;
+  }
+
+  .contact__form {
+    display: none;
+  }
+
+  .contact__form-desktop {
+    display: block;
+  }
+
+  .contact__name {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .footer {
+    padding-bottom: 1rem;
+  }
+
+  .footer__email {
     display: none;
   }
 }
