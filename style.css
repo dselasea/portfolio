@@ -261,16 +261,16 @@ a {
   margin-bottom: 3rem;
 }
 
+textarea,
+.form-control input {
+  padding: 0.8rem;
+}
+
 .form-control input,
 .form-control textarea {
   width: 100%;
   margin-bottom: 1rem;
   border: 2px solid var(--gray);
-}
-
-textarea,
-.form-control input {
-  padding: 0.8rem;
 }
 
 /* Footer */
@@ -299,7 +299,6 @@ textarea,
   }
 
   .nav__links-items {
-    display: inline-block;
     list-style: none;
     display: flex;
   }
