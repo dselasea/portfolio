@@ -38,16 +38,17 @@ a {
   border: 0;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
   background-color: var(--hover-state);
   cursor: pointer;
+  transform: scale(1.1);
 }
 
-.btn:focus,
 .btn:active {
-  background-color: var(--active-state);
+  transform: scale(0.9);
 }
 
 .heading-2 {
@@ -92,7 +93,7 @@ a {
 }
 
 .hero__title {
-  margin-bottom: 3rem;
+  margin-bottom: 3rem; 
 }
 
 .hero__content {
@@ -107,6 +108,66 @@ a {
 
 .hero__title-dark {
   color: var(--text-dark);
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-name: moveInLeft;
+  position: relative;
+}
+
+.hero__title-green {
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-name: moveInRight;
+  position: relative;
+}
+
+.hero_arrow-down {
+  position: relative;
+  animation: bounce 1s ease infinite normal;
+  top: 0;
+}
+
+/* Animation */
+@keyframes moveInLeft {
+  from {
+    left: -50%;
+  }
+
+  75% {
+    left: 10px;
+  }
+
+  to {
+    left: 0%;
+  }
+}
+
+@keyframes moveInRight {
+  from {
+    right: -50%;
+  }
+
+  75% {
+    right: 10px;
+  }
+
+  to {
+    right: 0;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    top: 0;
+  }
+
+  50% {
+    top: 10px;
+  }
+
+  to {
+    top: 0;
+  }
 }
 
 .hero__title-green {
@@ -285,7 +346,7 @@ textarea,
   color: var(--dark);
 }
 
-/* Desktop Styles min width 720px */
+/* Desktop Styles min width 768px */
 @media screen and (min-width: 768px) {
   .nav__logo,
   .nav__hamburger {
